@@ -60,6 +60,5 @@ const server = http.createServer((req, res) => {
 const port = 8000;
 server.listen(port, () => {
     // サーバーを起動時に実行されるコールバック関数
-    // console.log('Listening on ' + port);
     console.info('[' + new Date() + '] Listening on ' + port)
 });
