@@ -7,16 +7,16 @@ const http = require('http');
 const server = http.createServer((req, res) => {
     // サーバーにリクエストがあった時に呼び出されるコールバック関数
 
-    // アクセスログを出力
+    // アクセスログの出力
     const now = new Date();
-    console.info('[' + now + '] Requested by ' + req.connection.remoteAddress); // req.cone...ではリクエストが送られたIP情報を取得している
+    console.info('[' + now + '] Requested by ' + req.connection.remoteAddress); // req.cone...→リクエストが送られたIP情報を取得
 
     res.writeHead(200, {
         'Content-Type': 'text/plain; charset=utf-8'
     });
 
     switch (req.method) {
-        // reqオブジェクトHTTPメソッドの文字列、req.methodの値に応じて、条件分岐
+         // reqオブジェクトHTTPメソッドreq.methodの文字列値に応じて条件分岐
 
         case 'GET': // GETメソッドだった場合
             // リクエストされたURLをレスポンスに返す
